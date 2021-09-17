@@ -12,8 +12,10 @@
     splib.objectmodel
     splib.scenegraph
     splib.units
+    splib.caching
+    splib.meshing
 
 """
-__all__=["animation", "constants", "debug", "loaders", "geometric", "numerics", "objectmodel", "scenegraph", "units"]
+__all__=["animation", "constants", "debug", "loaders", "geometric", "numerics", "objectmodel", "scenegraph", "units", "caching", "meshing"]
 
 import splib.utils
