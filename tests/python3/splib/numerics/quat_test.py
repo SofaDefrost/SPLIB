@@ -1,6 +1,6 @@
 import unittest
-from math import sin, cos, pi
-from quat import *
+from splib.numerics.math import sin, cos, pi
+from splib.numerics.quat import *
 
 class Quat_test(unittest.TestCase):
 

@@ -322,7 +322,7 @@ class  Quat(numpy.ndarray):
 
         Note that the angle should be in radian.
         """
-        from quat import Quat
+        from splib.numerics.quat import Quat
         q = Quat()
         q[0]=axis[0]*math.sin(angle/2.)
         q[1]=axis[1]*math.sin(angle/2.)

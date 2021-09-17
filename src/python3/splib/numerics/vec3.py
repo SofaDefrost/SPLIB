@@ -1,5 +1,6 @@
 import numpy
 import math
+from splib.numerics.quat import Quat
 
 class Vec3(numpy.ndarray):
     """ The Vec3 class implements the following:
@@ -143,7 +144,6 @@ class Vec3(numpy.ndarray):
         >>> print(v)
         [1.,-1,1.]
         """
-        from quat import Quat
         self.put(range(3),(Quat.product(q,Quat.product(Quat(numpy.hstack((self, [0.]))), q.getInverse()))).getIm())
         return self
 
@@ -157,7 +157,6 @@ class Vec3(numpy.ndarray):
         >>> print(v)
         [1.,-1,1.]
         """
-        from quat import Quat
         q = Quat.createFromEuler(v, axis)
         self.rotateFromQuat(q)
         return self
@@ -173,7 +172,6 @@ class Vec3(numpy.ndarray):
         >>> print(v)
         [1.,-1,1.]
         """
-        from quat import Quat
         q = Quat.createFromAxisAngle(axis, angle)
         self.rotateFromQuat(q)
 

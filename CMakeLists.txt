@@ -12,7 +12,6 @@ if(SofaPython3_FOUND)
         SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src/python3/splib
         TARGET_DIRECTORY splib
     )
-    set(SofaPythonAny_FOUND TRUE)
 endif()
 
 set(HEADER_FILES src/cpp/splib/initPlugin.h)
@@ -37,5 +36,10 @@ sofa_create_package_with_targets(
 
 install(DIRECTORY docs DESTINATION share/sofa/${PROJECT_NAME})
 install(FILES "README.md" "LICENSE" DESTINATION .)
+
+
+#if(SOFA_BUILD_TEST)
+    add_subdirectory(tests)
+#endif()
 
 include(cmake/packaging.cmake)

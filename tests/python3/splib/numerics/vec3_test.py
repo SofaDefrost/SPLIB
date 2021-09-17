@@ -1,5 +1,5 @@
 import unittest
-from vec3 import *
+from splib.numerics.vec3 import *
 
 class Vec3_test(unittest.TestCase):
 
@@ -102,7 +102,7 @@ class Vec3_test(unittest.TestCase):
         # v.scale(2,1)
 
     def test_rotateFromQuat(self):
-        from quat import Quat
+        from splib.numerics.quat import Quat
         from math import pi
 
         v = Vec3(1.,1.,1.)

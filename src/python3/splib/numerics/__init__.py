@@ -37,7 +37,7 @@ splib.numerics.Matrix
 from math import *
 import numpy
 import numpy.linalg
-import splib3.numerics 
+import splib.numerics
 from splib.numerics.quat import Quat
 from splib.numerics.vec3 import *
 from math import pi

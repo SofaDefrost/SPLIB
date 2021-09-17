@@ -1,5 +1,5 @@
 import unittest
-from matrix import *
+from splib.numerics.matrix import *
 
 class Matrix_test(unittest.TestCase):
 
