@@ -4,9 +4,8 @@ project(SPLIB VERSION 3.0)
 include(cmake/environment.cmake)
 
 find_package(SofaFramework REQUIRED)
-find_package(SofaPython3 QUIET)
+find_package(SofaPython3 REQUIRED)
 
-set(SofaPythonAny_FOUND FALSE)
 if(SofaPython3_FOUND)
     message("-- Found SofaPython3")
     SP3_add_python_package(
@@ -14,12 +13,6 @@ if(SofaPython3_FOUND)
         TARGET_DIRECTORY splib
     )
     set(SofaPythonAny_FOUND TRUE)
-endif()
-
-
-if(!SofaPythonAny_FOUND)
-    message("-- Missing a python implementation (ofaPython3). Disabling the plugin")
-    return()
 endif()
 
 set(HEADER_FILES src/cpp/splib/initPlugin.h)
