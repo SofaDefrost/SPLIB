@@ -6,6 +6,10 @@ This library should contains python code that could be useful for use with Sofa.
 Historically SPLIB was part of a much larger framework called STLIB, but since the release of SofaPython3 it is now hosted as 
 a separated package. 
 
+# Versions
+current: Sofa/master SofaPython3/master SPLIB/master 
+deprecated: Sofa/21.01  SofaPython/21.01 the latest now version of SPLIB is available at: https://github.com/SofaDefrost/STLIB/releases/tag/SofaPython2-latest
+
 # To build SPLIB
 There are two ways to compile plugins for SOFA. The most commonly used is the __In-tree build__, i.e. building the plugin while building SOFA from its sources on github. The second option, which is less commonly used but provides more flexibility, is the __Out-of-tree build__, where SOFA is pre-built and installed (from sources or by downloading its binaries) and the plugin is compiled as a standalone module, against the SOFA libraries
  
