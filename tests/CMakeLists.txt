@@ -4,9 +4,9 @@ set(SOURCE_FILES
       ${CMAKE_CURRENT_SOURCE_DIR}/SPLIB_test.cpp
 )
 
-find_package(SofaPython3 REQUIRED)
+find_package(SofaPython3Testing REQUIRED)
 find_package(SofaGTestMain REQUIRED)
-find_package(SofaFramework REQUIRED)
+find_package(Sofa.Helper REQUIRED)
 
 set(TEST_FILES
     python3/splib/numerics/matrix_test.py
@@ -16,7 +16,7 @@ set(TEST_FILES
 
 enable_testing()
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${TEST_FILES})
-target_link_libraries(${PROJECT_NAME} SofaGTestMain SofaHelper SofaPython3::Plugin)
+target_link_libraries(${PROJECT_NAME} SofaGTestMain Sofa.Helper SofaPython3Testing)
 
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME})
 
